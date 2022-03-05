@@ -1,0 +1,303 @@
+body {
+    font-family: 'Fira Sans', sans-serif;
+    margin: 0;
+}
+
+*,
+:before,
+:after {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+/* Container
+================================================*/
+
+.container {
+    width: 100%;
+    max-width: 1176px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Header
+================================================*/
+
+.header {
+    width: 100%;
+    height: 128px;
+}
+
+/* Nav
+================================================*/
+
+.header-nav-link-right {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    padding: 16px 0;
+}
+
+.nav_link_right {
+    margin-left: 40px;
+    color: #909090;
+    text-decoration: none;
+}
+
+.nav_link_right:first-child {
+    margin-left: 0;
+}
+
+.nav-right-lang {
+    margin-right: 40px;
+}
+
+.header-nav-link-left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    padding: 13px 0;
+}
+
+.nav_link_left {
+    margin-left: 24px;
+    color: #121212;
+    text-decoration: none;
+}
+
+.nav_link_left:first-child {
+    margin-left: 0;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.nav-right{
+display: flex;
+align-items: center;
+}
+
+.nav-left-btn {
+    margin-left: 40px;
+    width: 94px;
+    height: 44px;
+    border-radius: 8px;
+    background-color: #ff9000;
+    border: 0;
+    font-weight: 500;
+    font-size: 16px;
+    font-style: normal;
+}
+
+/* Intro
+================================================*/
+
+.intro {
+    background: url("../images/intro-background.jpg") center no-repeat;
+    height: 460px;
+    width: 100%;
+    padding-top: 80px;
+    margin-bottom: 56px;
+}
+
+.intro_subtitle-1 {
+    font-size: 36px;
+    font-weight: 900;
+}
+
+.intro-title {
+    font-size: 96px;
+    font-weight: 900;
+}
+
+.intro_subtitle-2 {
+    font-size: 20px;
+}
+
+.intro_btn {
+    display: flex;
+    align-items: center;
+    padding: 16px 44px;
+    margin-top: 32px;
+    border-radius: 26px;
+    border: 0;
+    background-color: #fff;
+}
+
+.intro_btn_title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-right: 10px;
+}
+
+/* Tariffs
+================================================*/
+
+.tariffs-title-wrapper {
+    text-align: center;
+}
+
+.tariffs-title {
+    margin-bottom: 32px;
+    font-size: 36px;
+}
+
+.tariffs_title_text-1 {
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-thickness: 1px;
+}
+
+.tariffs_title_text-2 {
+    color: #0094FF;
+}
+
+.tariffs-card-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tariffs-card {
+    padding: 28px 24px;
+    border: solid #E5E5E5 1px;
+    border-radius: 16px;
+}
+
+.tariffs-card-header {
+    display: flex;
+    border-bottom: 1px solid #E5E5E5;
+    padding-bottom: 28px;
+}
+
+.tariffs-card-header-img {
+    width: 68px;
+    height: 68px;
+}
+
+.tariffs-card-header-text {
+    margin-left: 20px;
+    margin-top: 0;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.tariffs-card-body {
+    margin-top: 20px;
+}
+
+.tariffs-card-header-text-1 {
+    font-size: 32px;
+}
+
+.tariffs-card-header-text-2 {
+    font-size: 14px;
+    color: #909090;
+    font-weight: 400;
+}
+
+.tariffs-card-body-title {
+    font-size: 18px;
+    font-weight: 500;
+    color: #0094FF;
+}
+
+.card-header-body-text {
+    font-size: 16px;
+    color: #909090;
+}
+
+.card-header-body-text-1 {
+    font-size: 18px;
+    font-weight: 500;
+    color: black;
+}
+
+.tariffs-card-body-btn {
+    background-image: linear-gradient(to right, #FF9900 , #FFCD00);
+    border-radius: 16px;
+    border: 0;
+    padding: 25px 102px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.under-btn {
+    color: #0094FF;
+    font-size: 16px;
+    margin-bottom: 0;
+    margin-top: 20px;
+}
+
+
+/* Sound
+================================================*/
+.sound {
+    margin-top: 88px;
+}
+
+.sound-wrapper {
+    display: flex;
+}
+
+.sound-about {
+    margin-top: 20px;
+    margin-left: 59px;
+}
+
+.sound-about-text {
+    font-size: 24px;
+}
+
+.sound-bold-text {
+    font-weight: 700;
+}
+
+.sound-sub-text {
+    display: flex;
+}
+
+.sound-about-text-1 {
+    font-size: 96px;
+    font-weight: 300;
+}
+
+.sound-about-text-2 {
+    font-size: 96px;
+    font-weight: normal;
+}
+
+
+/* Sound Types
+================================================*/
+
+.sound-types-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.sound-types {
+    margin-top: 68px;
+}
+
+.sound-types-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sound-type-item {
+    display: flex;
+    align-items: center;
+}
+
+.sound-type-text {
+    margin-left: 24px;
+    font-size: 24px;
+    font-weight: 500;
+}
