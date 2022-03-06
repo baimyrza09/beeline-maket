@@ -10,260 +10,882 @@
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,500;0,700;1,900&display=swap"
           rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.9.0/slick/slick.css"/>
+    <!-- Добавляем тему по умолчанию из CDN -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.9.0/slick/slick-theme.css"/>
     <title>Document</title>
 </head>
 <body>
 
-<header class="header">
-    <div class="header__inner">
-        <div class="container">
-            <div class="header-nav-link-right">
-                <nav class="nav-right">
-                    <a href="#" class="nav_link_right">Помощь</a>
-                    <a href="#" class="nav_link_right">О компании</a>
-                    <a href="#" class="nav_link_right">Карта офисов</a>
-                    <a href="#" class="nav_link_right">Акции и новости</a>
-                    <a href="#" class="nav_link_right">Beeline рахмат</a>
-                </nav>
+<main>
+    <header class="header">
+        <div class="header__inner">
+            <div class="container">
+                <div class="header-nav-link-right">
+                    <nav class="nav-right">
+                        <a href="#" class="nav_link_right">Помощь</a>
+                        <a href="#" class="nav_link_right">О компании</a>
+                        <a href="#" class="nav_link_right">Карта офисов</a>
+                        <a href="#" class="nav_link_right">Акции и новости</a>
+                        <a href="#" class="nav_link_right">Beeline рахмат</a>
+                    </nav>
 
-                <nav class="nav-left">
-                    <span class="nav-right-lang">Рус/Кыр</span>
-                    <span>Частным лицам/Бизнесн</span>
-                </nav>
+                    <nav class="nav-left">
+                        <div class="nav-left-lang">
+                            <button class="nav-right-lang active">Рус</button>
+                            <span class="nav-slash">/</span>
+                            <button class="nav-right-lang">Кыр</button>
+                        </div>
+                        <div class="nav-left-clientType">
+                            <button class="nav-right-lang active">Частным лицам</button>
+                            <span class="nav-slash">/</span>
+                            <button class="nav-right-lang">Бизнесу</button>
+                        </div>
+                    </nav>
+                </div>
             </div>
-        </div>
 
-        <hr style="width: 100%; height: 1px; margin: 0; background-color: #E5E5E5;">
-        <div class="container">
-            <div class="header-nav-link-left">
-                <nav class="nav-right">
-                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M23.9999 46.3637C11.6312 46.3637 1.63623 36.3967 1.63623 24.0624C1.63623 18.0822 4.01003 12.4757 8.13294 8.23967C12.3808 4.00366 18.0029 1.63647 23.9999 1.63647C36.3686 1.63647 46.3636 11.6036 46.3636 23.9378C46.3636 36.2721 36.3686 46.2392 23.9999 46.3637Z" fill="url(#paint0_linear_9920_19858)"/>
-                        <mask id="mask0_9920_19858" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="1" y="1" width="46" height="46">
-                        <path d="M23.9999 46.3637C11.6312 46.3637 1.63623 36.3967 1.63623 24.0624C1.63623 18.0822 4.01003 12.4757 8.13294 8.23967C12.3808 4.00366 18.0029 1.63647 23.9999 1.63647C36.3687 1.63647 46.3636 11.6036 46.3636 23.9378C46.3636 36.2721 36.3687 46.2392 23.9999 46.3637Z" fill="url(#paint1_linear_9920_19858)"/>
-                        </mask>
-                        <g mask="url(#mask0_9920_19858)">
-                        <path d="M49.2831 19.525L-0.919922 19.5962L-0.907468 28.4763L49.2955 28.4051L49.2831 19.525Z" fill="#121212"/>
-                        <path d="M49.2831 37.4139L-0.919922 37.4851L-0.907163 46.582L49.2958 46.5108L49.2831 37.4139Z" fill="#121212"/>
-                        <path d="M49.2816 0.830813L-0.921387 0.902832L-0.907961 10.5859L49.295 10.5138L49.2816 0.830813Z" fill="#121212"/>
-                        </g>
-                        <defs>
-                        <linearGradient id="paint0_linear_9920_19858" x1="1.63623" y1="24.0049" x2="46.3732" y2="24.0049" gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#FF9900"/>
-                        <stop offset="0.765625" stop-color="#FFCD00"/>
-                        </linearGradient>
-                        <linearGradient id="paint1_linear_9920_19858" x1="1.61848" y1="24.0253" x2="46.3738" y2="23.962" gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#E8990C"/>
-                        <stop offset="0.3903" stop-color="#F4B40D"/>
-                        <stop offset="0.7418" stop-color="#FCC60D"/>
-                        <stop offset="1" stop-color="#FFCC0D"/>
-                        </linearGradient>
-                        </defs>
+            <hr style="width: 100%; height: 1px; margin: 0; background-color: #E5E5E5;">
+            <div class="container">
+                <div class="header-nav-link-left">
+                    <nav class="nav-right">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M23.9999 46.3637C11.6312 46.3637 1.63623 36.3967 1.63623 24.0624C1.63623 18.0822 4.01003 12.4757 8.13294 8.23967C12.3808 4.00366 18.0029 1.63647 23.9999 1.63647C36.3686 1.63647 46.3636 11.6036 46.3636 23.9378C46.3636 36.2721 36.3686 46.2392 23.9999 46.3637Z"
+                                  fill="url(#paint0_linear_9920_19858)"/>
+                            <mask id="mask0_9920_19858" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="1" y="1"
+                                  width="46" height="46">
+                                <path d="M23.9999 46.3637C11.6312 46.3637 1.63623 36.3967 1.63623 24.0624C1.63623 18.0822 4.01003 12.4757 8.13294 8.23967C12.3808 4.00366 18.0029 1.63647 23.9999 1.63647C36.3687 1.63647 46.3636 11.6036 46.3636 23.9378C46.3636 36.2721 36.3687 46.2392 23.9999 46.3637Z"
+                                      fill="url(#paint1_linear_9920_19858)"/>
+                            </mask>
+                            <g mask="url(#mask0_9920_19858)">
+                                <path d="M49.2831 19.525L-0.919922 19.5962L-0.907468 28.4763L49.2955 28.4051L49.2831 19.525Z"
+                                      fill="#121212"/>
+                                <path d="M49.2831 37.4139L-0.919922 37.4851L-0.907163 46.582L49.2958 46.5108L49.2831 37.4139Z"
+                                      fill="#121212"/>
+                                <path d="M49.2816 0.830813L-0.921387 0.902832L-0.907961 10.5859L49.295 10.5138L49.2816 0.830813Z"
+                                      fill="#121212"/>
+                            </g>
+                            <defs>
+                                <linearGradient id="paint0_linear_9920_19858" x1="1.63623" y1="24.0049" x2="46.3732"
+                                                y2="24.0049" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#FF9900"/>
+                                    <stop offset="0.765625" stop-color="#FFCD00"/>
+                                </linearGradient>
+                                <linearGradient id="paint1_linear_9920_19858" x1="1.61848" y1="24.0253" x2="46.3738"
+                                                y2="23.962" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#E8990C"/>
+                                    <stop offset="0.3903" stop-color="#F4B40D"/>
+                                    <stop offset="0.7418" stop-color="#FCC60D"/>
+                                    <stop offset="1" stop-color="#FFCC0D"/>
+                                </linearGradient>
+                            </defs>
                         </svg>
-                    <a href="#" class="nav_link_left">Перейти в Билайн</a>
-                    <a href="#" class="nav_link_left">Тарифы</a>
-                    <a href="#" class="nav_link_left">Услуги</a>
-                    <a href="#" class="nav_link_left">Пополнить баланс</a>
-                    <a href="#" class="nav_link_left">Приложения</a>
-                    <a href="#" class="nav_link_left">Еще</a>
-                </nav>
+                        <a href="#" class="nav_link_left">Перейти в Билайн</a>
+                        <a href="#" class="nav_link_left">Тарифы</a>
+                        <a href="#" class="nav_link_left">Услуги</a>
+                        <a href="#" class="nav_link_left">Пополнить баланс</a>
+                        <a href="#" class="nav_link_left">Приложения</a>
+                        <a href="#" class="nav_link_left">Еще</a>
+                    </nav>
 
-                <nav class="nav-left">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="11" cy="11" r="8.25" stroke="#121212" stroke-width="1.5"/>
-                        <path d="M22.0002 22L17.1562 17.156" stroke="#121212" stroke-width="1.5"
-                              stroke-linecap="round"/>
+                    <nav class="nav-left">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="11" cy="11" r="8.25" stroke="#121212" stroke-width="1.5"/>
+                            <path d="M22.0002 22L17.1562 17.156" stroke="#121212" stroke-width="1.5"
+                                  stroke-linecap="round"/>
+                        </svg>
+
+                        <button class="nav-left-btn">Войти</button>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        </div>
+    </header>
+
+    <header class="header__mobile">
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <div class="header__mobile-logo">
+            <img src="./assets/images/logo-mobile.png" alt="">
+        </div>
+
+        <div class="nav-left-lang">
+            <button class="nav-right-lang active">Рус</button>
+            <span class="nav-slash">/</span>
+            <button class="nav-right-lang">Кыр</button>
+        </div>
+    </header>
+
+    <div class="header__menu">
+        <ul class="header__menu-list">
+            <li class="header__menu-item"><a>Помощь</a></li>
+            <li class="header__menu-item"><a>О компании</a></li>
+            <li class="header__menu-item"><a>Карта офисов</a></li>
+            <li class="header__menu-item"><a>Акции и новости</a></li>
+            <li class="header__menu-item"><a>Beeline Рахмат</a></li>
+            <li class="header__menu-item"><a>Частным лицам / Бизнесу</a></li>
+            <hr>
+            <li class="header__menu-item"><a>Перейти в Билайн</a></li>
+            <li class="header__menu-item"><a>Тарифы</a></li>
+            <li class="header__menu-item"><a>Услуги</a></li>
+            <li class="header__menu-item"><a>Пополнить баланс</a></li>
+            <li class="header__menu-item"><a>Приложения</a></li>
+            <li class="header__menu-item"><a>Еще</a></li>
+        </ul>
+    </div>
+
+    <div class="header__menu">
+
+    </div>
+
+    <div class="intro">
+        <div class="container">
+            <div class="intro_inner">
+                <h2 class="intro_subtitle-1">Смотрите и слушайте</h2>
+                <h1 class="intro-title">Бесплатно</h1>
+                <h3 class="intro_subtitle-2">Новые тарифы Бирге Музыка с <br> большими объемами интернета</h3>
+
+                <button class="intro_btn"><span class="intro_btn_title">Как подключить СберЗвук?</span>
+                    <svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M36.5 18.0087C36.5 27.9247 28.4208 36 18.5 36C8.57915 36 0.5 27.9247 0.5 18.0087C0.5 8.07525 8.57915 0 18.5 0C28.4208 0 36.5 8.07525 36.5 18.0087Z"
+                              fill="#FFCD00"/>
+                        <path d="M25.7001 18.0088C25.7001 18.4637 25.5569 18.9204 25.2706 19.2861C25.2169 19.3578 24.9663 19.6535 24.7694 19.846L24.662 19.951C23.1586 21.5449 19.418 23.942 17.5208 24.7101C17.5208 24.7276 16.3933 25.1843 15.8563 25.2001H15.7848C14.9615 25.2001 14.1919 24.7469 13.7981 24.012C13.5833 23.6078 13.3865 22.4355 13.3686 22.4198C13.2075 21.3682 13.1001 19.7585 13.1001 17.9913C13.1001 16.1384 13.2075 14.4569 13.4044 13.4246C13.4044 13.4071 13.6012 12.4623 13.7265 12.1473C13.9234 11.6941 14.2813 11.3075 14.7288 11.0625C15.0867 10.8893 15.4626 10.8 15.8563 10.8C16.268 10.8193 17.0376 11.08 17.3419 11.2025C19.3464 11.9723 23.1765 14.4919 24.6441 16.0316C24.8947 16.2766 25.1632 16.5758 25.2348 16.644C25.539 17.029 25.7001 17.5014 25.7001 18.0088Z"
+                              fill="#121212"/>
                     </svg>
-
-                    <button class="nav-left-btn">Войти</button>
-                </nav>
+                </button>
             </div>
         </div>
     </div>
+
+    <div class="intro_inner-mobile">
+        <h2 class="intro_subtitle-1-mobile">Смотрите и слушайте</h2>
+        <h1 class="intro-title-mobile">Бесплатно</h1>
+        <h3 class="intro_subtitle-2-mobile">Новые тарифы Бирге Музыка с <br> большими объемами интернета</h3>
+
+        <button class="intro_btn-mobile"><span class="intro_btn_title-mobile">Как подключить СберЗвук?</span>
+            <svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M36.5 18.0087C36.5 27.9247 28.4208 36 18.5 36C8.57915 36 0.5 27.9247 0.5 18.0087C0.5 8.07525 8.57915 0 18.5 0C28.4208 0 36.5 8.07525 36.5 18.0087Z"
+                      fill="#fff"/>
+                <path d="M25.7001 18.0088C25.7001 18.4637 25.5569 18.9204 25.2706 19.2861C25.2169 19.3578 24.9663 19.6535 24.7694 19.846L24.662 19.951C23.1586 21.5449 19.418 23.942 17.5208 24.7101C17.5208 24.7276 16.3933 25.1843 15.8563 25.2001H15.7848C14.9615 25.2001 14.1919 24.7469 13.7981 24.012C13.5833 23.6078 13.3865 22.4355 13.3686 22.4198C13.2075 21.3682 13.1001 19.7585 13.1001 17.9913C13.1001 16.1384 13.2075 14.4569 13.4044 13.4246C13.4044 13.4071 13.6012 12.4623 13.7265 12.1473C13.9234 11.6941 14.2813 11.3075 14.7288 11.0625C15.0867 10.8893 15.4626 10.8 15.8563 10.8C16.268 10.8193 17.0376 11.08 17.3419 11.2025C19.3464 11.9723 23.1765 14.4919 24.6441 16.0316C24.8947 16.2766 25.1632 16.5758 25.2348 16.644C25.539 17.029 25.7001 17.5014 25.7001 18.0088Z"
+                      fill="#121212"/>
+            </svg>
+        </button>
     </div>
-</header>
 
+    <div class="intro__mobile"></div>
 
-<div class="intro">
-    <div class="container">
-        <div class="intro_inner">
-            <h2 class="intro_subtitle-1">Смотрите и слушайте</h2>
-            <h1 class="intro-title">Бесплатно</h1>
-            <h3 class="intro_subtitle-2">Новые тарифы Бирге Музыка с <br> большими объемами интернета</h3>
-
-            <button class="intro_btn"> <span class="intro_btn_title">Как подключить СберЗвук?</span> <svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M36.5 18.0087C36.5 27.9247 28.4208 36 18.5 36C8.57915 36 0.5 27.9247 0.5 18.0087C0.5 8.07525 8.57915 0 18.5 0C28.4208 0 36.5 8.07525 36.5 18.0087Z" fill="#FFCD00"/>
-                <path d="M25.7001 18.0088C25.7001 18.4637 25.5569 18.9204 25.2706 19.2861C25.2169 19.3578 24.9663 19.6535 24.7694 19.846L24.662 19.951C23.1586 21.5449 19.418 23.942 17.5208 24.7101C17.5208 24.7276 16.3933 25.1843 15.8563 25.2001H15.7848C14.9615 25.2001 14.1919 24.7469 13.7981 24.012C13.5833 23.6078 13.3865 22.4355 13.3686 22.4198C13.2075 21.3682 13.1001 19.7585 13.1001 17.9913C13.1001 16.1384 13.2075 14.4569 13.4044 13.4246C13.4044 13.4071 13.6012 12.4623 13.7265 12.1473C13.9234 11.6941 14.2813 11.3075 14.7288 11.0625C15.0867 10.8893 15.4626 10.8 15.8563 10.8C16.268 10.8193 17.0376 11.08 17.3419 11.2025C19.3464 11.9723 23.1765 14.4919 24.6441 16.0316C24.8947 16.2766 25.1632 16.5758 25.2348 16.644C25.539 17.029 25.7001 17.5014 25.7001 18.0088Z" fill="#121212"/>
-                </svg>
-            </button>
-        </div>
-    </div>
-</div>
-
-<div class="tariffs">
-    <div class="container">
-       <div class="tariffs-title-wrapper"> <h2 class="tariffs-title">Подключай новые тарифы <span class="tariffs_title_text-1">Бирге Музыка</span> <br> с <span class="tariffs_title_text-2">бесплатной</span> подпиской</p></div>
-        
-        <div class="tariffs-card-wrapper">
-            <div class="tariffs-card">
-                <div class="tariffs-card-header">
-                    <img class="tariffs-card-header-img" src="./assets/images/tarrifs-image-1.png" alt="" >
-                    <p class="tariffs-card-header-text">
-                        Бирге Музыка + ivi <br>
-                        <span class="tariffs-card-header-text-1">590 с</span> <span class="tariffs-card-header-text-2">/ 4 недели</span>
-                    </p>
+    <div class="background-wrapper">
+        <div class="tariffs">
+            <div class="container">
+                <div class="tariffs-title-wrapper">
+                    <div class="tariffs-title">Подключай новые тарифы
+                        <span class="tariffs_title_text-1">Бирге Музыка</span>
+                    </div>
+                    <div>c <span class="tariffs_title_text-2">бесплатной</span> подпиской</div>
                 </div>
 
-                <div class="tariffs-card-body">
-                    <h3 class="tariffs-card-body-title">Подключай музыку в Мой Beeline</h3>
-                    <p class="card-header-body-text"><span class="card-header-body-text-1">45 Гб</span> интернета</p>
-                    <p class="card-header-body-text"><span class="card-header-body-text-1">45 мин</span> на <img src="./assets/images/wifi-icon.png" alt=""> звонки вне сети</p>
-                    <p class="card-header-body-text"><span class="card-header-body-text-1">2 Гб</span> на + бесплатная подписка</p>
-                    <p class="card-header-body-text"><span class="card-header-body-text-1">15 Гб</span> на <img src="./assets/images/ivi.png" alt=""> + бесплатная подписка</p>
-                    <p class="card-header-body-text"><span class="card-header-body-text-1">10 Гб</span> на раздачу Wi-Fi</p>
-                    <button class="tariffs-card-body-btn">Подключить</button>
-                    <div class="tariffs-title-wrapper"><p class="under-btn">Получить SIM-карту</p></div>
+                <div class="tariffs-card-wrapper ">
+                    <div class="tariffs-card">
+                        <div class="tariffs-card-header">
+                            <img class="tariffs-card-header-img" src="./assets/images/tarrifs-image-1.png" alt="">
+                            <p class="tariffs-card-header-text">
+                                Бирге Музыка + ivi <br>
+                                <span class="tariffs-card-header-text-1">590 с</span> <span
+                                    class="tariffs-card-header-text-2">/ 4 недели</span>
+                            </p>
+                        </div>
+
+                        <div class="tariffs-card-body">
+                            <h3 class="tariffs-card-body-title">Подключай музыку в Мой Beeline</h3>
+                            <p class="card-header-body-text"><span class="card-header-body-text-1">45 Гб</span>
+                                интернета
+                            </p>
+                            <p class="card-header-body-text"><span class="card-header-body-text-1">45 мин</span> на
+                                звонки
+                                вне
+                                сети</p>
+                            <p class="card-header-body-text"><span class="card-header-body-text-1">2 Гб</span> на <img
+                                    class="card-body-img" src="./assets/images/wifi-icon.png" alt=""> + бесплатная
+                                подписка</p>
+                            <p class="card-header-body-text"><span class="card-header-body-text-1">15 Гб</span> на <img
+                                    class="card-body-img" src="./assets/images/ivi.png" alt=""> + бесплатная подписка
+                            </p>
+                            <p class="card-header-body-text"><span class="card-header-body-text-1">10 Гб</span> на
+                                раздачу
+                                Wi-Fi
+                            </p>
+                            <button class="tariffs-card-body-btn">Подключить</button>
+                            <button class="under-btn">Получить SIM-карту</button>
+                        </div>
+                    </div>
+
+                    <div class="tariffs-card">
+                        <div class="tariffs-card-header">
+                            <img class="tariffs-card-header-img" src="./assets/images/tarrifs-image-1.png" alt="">
+                            <p class="tariffs-card-header-text">
+                                Бирге Музыка + ivi <br>
+                                <span class="tariffs-card-header-text-1">590 с</span> <span
+                                    class="tariffs-card-header-text-2">/ 4 недели</span>
+                            </p>
+                        </div>
+
+                        <div class="tariffs-card-body">
+                            <h3 class="tariffs-card-body-title">Подключай музыку в Мой Beeline</h3>
+                            <p class="card-header-body-text"><span class="card-header-body-text-1">50 Гб</span>
+                                интернета
+                            </p>
+                            <p class="card-header-body-text"><span class="card-header-body-text-1">45 мин</span> на
+                                звонки
+                                вне
+                                сети</p>
+                            <p class="card-header-body-text"><span class="card-header-body-text-1">Безлимит</span> на
+                                <img
+                                        src="./assets/images/yotube.png" alt=""> + бесплатная подписка</p>
+                            <p class="card-header-body-text"><span class="card-header-body-text-1">3 Гб</span> на <img
+                                    src="./assets/images/wifi-icon.png" alt=""> + бесплатная подписка</p>
+                            <p class="card-header-body-text"><span class="card-header-body-text-1">10 Гб</span> на
+                                раздачу
+                                Wi-Fi
+                            </p>
+                            <button class="tariffs-card-body-btn">Подключить</button>
+                            <button class="under-btn">Получить SIM-карту</button>
+                        </div>
+                    </div>
+
+                    <div class="tariffs-card">
+                        <div class="tariffs-card-header">
+                            <img class="tariffs-card-header-img" src="./assets/images/tarrifs-image-1.png" alt="">
+                            <p class="tariffs-card-header-text">
+                                Бирге Музыка + ivi <br>
+                                <span class="tariffs-card-header-text-1">590 с</span> <span
+                                    class="tariffs-card-header-text-2">/ 4 недели</span>
+                            </p>
+                        </div>
+
+                        <div class="tariffs-card-body">
+                            <h3 class="tariffs-card-body-title">Подключай музыку в Мой Beeline</h3>
+                            <p class="card-header-body-text"><span class="card-header-body-text-1">Безлимитный</span>
+                                интернета
+                            </p>
+                            <p class="card-header-body-text"><span class="card-header-body-text-1">100 мин</span> на
+                                звонки
+                                вне
+                                сети</p>
+                            <p class="card-header-body-text"><span class="card-header-body-text-1">Безлимит</span> на
+                                <img
+                                        src="./assets/images/wifi-icon.png" alt=""> + бесплатная подписка</p>
+                            <p class="card-header-body-text"><span class="card-header-body-text-1">Безлимит</span> на
+                                <img
+                                        src="./assets/images/ivi.png" alt=""> + бесплатная подписка</p>
+                            <p class="card-header-body-text"><span class="card-header-body-text-1">20 Гб</span> на
+                                раздачу
+                                Wi-Fi
+                            </p>
+                            <button class="tariffs-card-body-btn">Подключить</button>
+                            <button class="under-btn">Получить SIM-карту</button>
+                        </div>
+                    </div>
+
                 </div>
-            </div>
 
-            <div class="tariffs-card">
-                <div class="tariffs-card-header">
-                    <img class="tariffs-card-header-img" src="./assets/images/tarrifs-image-1.png" alt="" >
-                    <p class="tariffs-card-header-text">
-                        Бирге Музыка + ivi <br>
-                        <span class="tariffs-card-header-text-1">590 с</span> <span class="tariffs-card-header-text-2">/ 4 недели</span>
-                    </p>
-                </div>
 
-                <div class="tariffs-card-body">
-                    <h3 class="tariffs-card-body-title">Подключай музыку в Мой Beeline</h3>
-                    <p class="card-header-body-text"><span class="card-header-body-text-1">50 Гб</span> интернета</p>
-                    <p class="card-header-body-text"><span class="card-header-body-text-1">45 мин</span> на звонки вне сети</p>
-                    <p class="card-header-body-text"><span class="card-header-body-text-1">Безлимит</span> на <img src="./assets/images/yotube.png" alt=""> + бесплатная подписка</p>
-                    <p class="card-header-body-text"><span class="card-header-body-text-1">3 Гб</span> на <img src="./assets/images/wifi-icon.png" alt=""> + бесплатная подписка</p>
-                    <p class="card-header-body-text"><span class="card-header-body-text-1">10 Гб</span> на раздачу Wi-Fi</p>
-                    <button class="tariffs-card-body-btn">Подключить</button>
-                    <div class="tariffs-title-wrapper"><p class="under-btn">Получить SIM-карту</p></div>
-                </div>
-            </div>
-
-            <div class="tariffs-card">
-                <div class="tariffs-card-header">
-                    <img class="tariffs-card-header-img" src="./assets/images/tarrifs-image-1.png" alt="" >
-                    <p class="tariffs-card-header-text">
-                        Бирге Музыка + ivi <br>
-                        <span class="tariffs-card-header-text-1">590 с</span> <span class="tariffs-card-header-text-2">/ 4 недели</span>
-                    </p>
-                </div>
-
-                <div class="tariffs-card-body">
-                    <h3 class="tariffs-card-body-title">Подключай музыку в Мой Beeline</h3>
-                    <p class="card-header-body-text"><span class="card-header-body-text-1">Безлимитный</span> интернета</p>
-                    <p class="card-header-body-text"><span class="card-header-body-text-1">100 мин</span> на звонки вне сети</p>
-                    <p class="card-header-body-text"><span class="card-header-body-text-1">Безлимит</span> на <img src="./assets/images/wifi-icon.png" alt=""> + бесплатная подписка</p>
-                    <p class="card-header-body-text"><span class="card-header-body-text-1">Безлимит</span> на <img src="./assets/images/ivi.png" alt=""> + бесплатная подписка</p>
-                    <p class="card-header-body-text"><span class="card-header-body-text-1">20 Гб</span> на раздачу Wi-Fi</p>
-                    <button class="tariffs-card-body-btn">Подключить</button>
-                    <div class="tariffs-title-wrapper"><p class="under-btn">Получить SIM-карту</p></div>
-                </div>
-            </div>
-            
-        </div>
-
-        
-    </div>
-</div>
-
-<div class="sound">
-        <div class="sound-wrapper">
-           <img class="sound-img" src="./assets/images/sound-background.jpg" alt="">
-           <div class="container">
-            <div class="sound-about">
-                <h2 class="tariffs-title">Что такое СберЗвук?</h2>
-                <p class="sound-about-text">СберЗвук — это <span class="sound-bold-text">музыка</span> для любого момента.</p>
-                <p class="sound-about-text">Тысячи готовых <span class="sound-bold-text">плейлистов, чарты</span> и <span class="sound-bold-text">персональные рекомендации</span> для занятий и настроений в удобном приложении для iOS 
-                и Android и на сайте.</p>
-                <div class="sound-sub-text">
-                    <p class="sound-about-text"><span class="sound-about-text-1">60</span><span class="sound-about-text-2">+</span> млн.<br> треков</p>
-                    <p class="sound-about-text"><span class="sound-about-text-1">60+</span>млн.треков</p>
-                </div>
-            </div>
-           </div>
-        </div>
-    </div>
-</div>
-
-<div class="sound-types">
-    <div class="sound-types-container">
-        <div class="sound-types-wrapper">
-            <div class="sound-type-item"><svg width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M35.7168 25.5179V14.2976C35.7168 10.5796 32.7094 7.56549 28.9999 7.56549C25.2903 7.56549 22.2829 10.5796 22.2829 14.2976V25.5179C22.2829 29.2359 25.2903 32.25 28.9999 32.25C32.7094 32.25 35.7168 29.2359 35.7168 25.5179ZM28.9999 3.07739C22.8171 3.07739 17.805 8.10086 17.805 14.2976V25.5179C17.805 31.7147 22.8171 36.7381 28.9999 36.7381C35.1826 36.7381 40.1947 31.7147 40.1947 25.5179V14.2976C40.1947 8.10086 35.1826 3.07739 28.9999 3.07739ZM26.7609 45.591C16.6856 44.4747 8.84912 35.9135 8.84912 25.5179H13.3271C13.3271 34.1933 20.344 41.2262 28.9999 41.2262C37.6557 41.2262 44.6726 34.1933 44.6726 25.5179H49.1506C49.1506 35.9135 41.3141 44.4747 31.2388 45.591V54.6905H26.7609V45.591Z" fill="url(#paint0_linear_9048_90119)"/>
-                <defs>
-                <linearGradient id="paint0_linear_9048_90119" x1="51.0565" y1="69.6136" x2="30.7126" y2="32.7737" gradientUnits="userSpaceOnUse">
-                <stop offset="0.075419" stop-color="#FBB033"/>
-                <stop offset="0.6141" stop-color="#FDC73D"/>
-                <stop offset="0.959" stop-color="#FFE248"/>
-                </linearGradient>
-                </defs>
-                </svg>
-                <span class="sound-type-text">Подкасты</span>
-            </div>
-
-            <div class="sound-type-item">
-                <svg width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M16.1107 8.05566H41.8885C44.5569 8.05566 46.7218 10.2205 46.7218 12.889V45.1112C46.7218 47.7797 44.5569 49.9445 41.8885 49.9445H16.1107C13.4422 49.9445 11.2773 47.7797 11.2773 45.1112V12.889C11.2773 10.2205 13.4422 8.05566 16.1107 8.05566ZM41.8885 11.2779H16.1107C15.2218 11.2779 14.4996 12.0001 14.4996 12.889V45.1112C14.4996 46.0001 15.2218 46.7223 16.1107 46.7223H41.8885C42.7773 46.7223 43.4996 46.0001 43.4996 45.1112V12.889C43.4996 12.0001 42.7773 11.2779 41.8885 11.2779ZM38.6654 29.7222V32.9444H19.332V29.7222H38.6654ZM38.6654 41.0001V37.7778H19.332V41.0001H38.6654Z" fill="url(#paint0_linear_9048_90146)"/>
-                    <mask id="mask0_9048_90146" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="19" y="8" width="11" height="14">
-                    <path d="M27 8H22C20.3431 8 19 9.34315 19 11V19C19 20.6569 20.3431 22 22 22H27C28.6569 22 30 20.6569 30 19V11C30 9.34315 28.6569 8 27 8Z" fill="white"/>
-                    </mask>
-                    <g mask="url(#mask0_9048_90146)">
-                    <path d="M27 8H22C20.3431 8 19 9.34315 19 11V19C19 20.6569 20.3431 22 22 22H27C28.6569 22 30 20.6569 30 19V11C30 9.34315 28.6569 8 27 8Z" stroke="url(#paint1_linear_9048_90146)" stroke-width="6.4"/>
-                    </g>
-                    <defs>
-                    <linearGradient id="paint0_linear_9048_90146" x1="48.3981" y1="62.056" x2="32.6142" y2="31.0826" gradientUnits="userSpaceOnUse">
-                    <stop offset="0.075419" stop-color="#FBB033"/>
-                    <stop offset="0.6141" stop-color="#FDC73D"/>
-                    <stop offset="0.959" stop-color="#FFE248"/>
-                    </linearGradient>
-                    <linearGradient id="paint1_linear_9048_90146" x1="30.5202" y1="26.0479" x2="25.0203" y2="16.0261" gradientUnits="userSpaceOnUse">
-                    <stop offset="0.075419" stop-color="#FBB033"/>
-                    <stop offset="0.6141" stop-color="#FDC73D"/>
-                    <stop offset="0.959" stop-color="#FFE248"/>
-                    </linearGradient>
-                    </defs>
-                    </svg>
-                    <span class="sound-type-text">Аудионкниги</span>
-            </div>
-
-            <div class="sound-type-item">
-                <svg width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M34.3226 8.70273L33.9026 10.2466L34.3226 8.70273ZM33.8063 9.5031L32.5014 10.429L33.8063 9.5031ZM9.30368 33.5132L10.2558 32.2273L9.30368 33.5132ZM28.8125 48.2591C19.7559 48.2591 12.1484 42.0326 10.0452 33.625L6.94085 34.4015C9.39181 44.1995 18.2529 51.4591 28.8125 51.4591V48.2591ZM48.1569 28.9147C48.1569 39.5977 39.4954 48.2591 28.8125 48.2591V51.4591C41.2628 51.4591 51.3569 41.365 51.3569 28.9147H48.1569ZM33.9026 10.2466C42.1177 12.4812 48.1569 19.9953 48.1569 28.9147H51.3569C51.3569 18.5147 44.315 9.76261 34.7425 7.15882L33.9026 10.2466ZM32.5014 10.429C34.3274 13.0024 35.4005 16.1454 35.4005 19.5435H38.6005C38.6005 15.4603 37.3085 11.674 35.1112 8.57722L32.5014 10.429ZM35.4005 19.5435C35.4005 28.253 28.3391 35.3144 19.6296 35.3144V38.5144C30.1064 38.5144 38.6005 30.0203 38.6005 19.5435H35.4005ZM19.6296 35.3144C16.1168 35.3144 12.8763 34.1676 10.2558 32.2273L8.35159 34.7991C11.5043 37.1334 15.4081 38.5144 19.6296 38.5144V35.3144ZM34.7425 7.15882C33.749 6.88857 32.8705 7.37607 32.44 8.0545C32.0211 8.71444 31.9516 9.65417 32.5014 10.429L35.1112 8.57722C35.3874 8.96661 35.3481 9.44413 35.1418 9.76923C34.9237 10.1128 34.4401 10.3928 33.9026 10.2466L34.7425 7.15882ZM10.0452 33.625C10.1804 34.1652 9.89066 34.6428 9.54282 34.8538C9.21364 35.0535 8.73538 35.0833 8.35159 34.7991L10.2558 32.2273C9.49221 31.662 8.55129 31.7126 7.88306 32.1179C7.19617 32.5346 6.69104 33.4028 6.94085 34.4015L10.0452 33.625Z" fill="url(#paint0_linear_9048_90155)"/>
-                    <defs>
-                    <linearGradient id="paint0_linear_9048_90155" x1="53.4604" y1="64.2898" x2="38.4561" y2="29.4108" gradientUnits="userSpaceOnUse">
-                    <stop offset="0.075419" stop-color="#FBB033"/>
-                    <stop offset="0.6141" stop-color="#FDC73D"/>
-                    <stop offset="0.959" stop-color="#FFE248"/>
-                    </linearGradient>
-                    </defs>
-                    </svg>
-                    <span class="sound-type-text">Аудиосказки</span>
-            </div>
-            
-            <div class="sound-type-item">
-                <svg width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M29.0001 8.05566C40.5667 8.05566 49.9445 17.4335 49.9445 29.0001C49.9445 40.5667 40.5667 49.9445 29.0001 49.9445C17.4335 49.9445 8.05566 40.5667 8.05566 29.0001C8.05566 17.4335 17.4335 8.05566 29.0001 8.05566ZM29.0001 11.2779C19.2131 11.2779 11.2779 19.2131 11.2779 29.0001C11.2779 38.7871 19.2131 46.7223 29.0001 46.7223C38.7871 46.7223 46.7223 38.7871 46.7223 29.0001C46.7223 19.2131 38.7871 11.2779 29.0001 11.2779ZM22.5557 20.9446C22.5557 19.6791 23.9476 18.9077 25.0207 19.5783L37.9096 27.6339C38.9192 28.2649 38.9192 29.7353 37.9096 30.3663L25.0207 38.4219C23.9476 39.0926 22.5557 38.3211 22.5557 37.0557V20.9446ZM25.7779 34.1488L34.0158 29.0001L25.7779 23.8514V34.1488Z" fill="url(#paint0_linear_9048_90164)"/>
-                    <defs>
-                    <linearGradient id="paint0_linear_9048_90164" x1="51.9255" y1="62.056" x2="37.7392" y2="29.1563" gradientUnits="userSpaceOnUse">
-                    <stop offset="0.075419" stop-color="#FBB033"/>
-                    <stop offset="0.6141" stop-color="#FDC73D"/>
-                    <stop offset="0.959" stop-color="#FFE248"/>
-                    </linearGradient>
-                    </defs>
-                    </svg>
-                    <span class="sound-type-text">Лайвы</span>              
             </div>
         </div>
+
+        <div class="sound">
+            <div class="sound-wrapper">
+                <div class="sound-img-wrapper">
+                    <img class="sound-img" src="./assets/images/visual.png" alt="">
+                </div>
+                <div class="container">
+                    <div class="sound-about">
+                        <h2 class="tariffs-title">Что такое СберЗвук?</h2>
+                        <p class="sound-about-text">СберЗвук — это <span class="sound-bold-text">музыка</span> для
+                            любого
+                            момента.</p>
+                        <p class="sound-about-text">Тысячи готовых <span
+                                class="sound-bold-text">плейлистов, чарты</span> и
+                            <br>
+                            <span class="sound-bold-text">персональные рекомендации</span> для занятий и <br> настроений
+                            в
+                            удобном
+                            приложении для iOS <br>
+                            и Android и на сайте.</p>
+                        <div class="sound-stats">
+                            <div class="sound-stats-left">
+                                <div class="sound-stats-num">60</div>
+                                <div class="sound-stats-plus">+</div>
+                                <div class="sound-stats-text">млн.<br>треков</div>
+                            </div>
+                            <div class="sound-stats-right">
+                                <div class="sound-stats-num">12</div>
+                                <div class="sound-stats-subtext">стран, где<br>слушают СберЗвук</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sound-types">
+            <div class="sound-types-container">
+                <div class="sound-types-wrapper">
+                    <div class="sound-type-item">
+                        <svg width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M35.7168 25.5179V14.2976C35.7168 10.5796 32.7094 7.56549 28.9999 7.56549C25.2903 7.56549 22.2829 10.5796 22.2829 14.2976V25.5179C22.2829 29.2359 25.2903 32.25 28.9999 32.25C32.7094 32.25 35.7168 29.2359 35.7168 25.5179ZM28.9999 3.07739C22.8171 3.07739 17.805 8.10086 17.805 14.2976V25.5179C17.805 31.7147 22.8171 36.7381 28.9999 36.7381C35.1826 36.7381 40.1947 31.7147 40.1947 25.5179V14.2976C40.1947 8.10086 35.1826 3.07739 28.9999 3.07739ZM26.7609 45.591C16.6856 44.4747 8.84912 35.9135 8.84912 25.5179H13.3271C13.3271 34.1933 20.344 41.2262 28.9999 41.2262C37.6557 41.2262 44.6726 34.1933 44.6726 25.5179H49.1506C49.1506 35.9135 41.3141 44.4747 31.2388 45.591V54.6905H26.7609V45.591Z"
+                                  fill="url(#paint0_linear_9048_90119)"/>
+                            <defs>
+                                <linearGradient id="paint0_linear_9048_90119" x1="51.0565" y1="69.6136" x2="30.7126"
+                                                y2="32.7737" gradientUnits="userSpaceOnUse">
+                                    <stop offset="0.075419" stop-color="#FBB033"/>
+                                    <stop offset="0.6141" stop-color="#FDC73D"/>
+                                    <stop offset="0.959" stop-color="#FFE248"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <span class="sound-type-text">Подкасты</span>
+                    </div>
+
+                    <div class="sound-type-item">
+                        <svg width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M16.1107 8.05566H41.8885C44.5569 8.05566 46.7218 10.2205 46.7218 12.889V45.1112C46.7218 47.7797 44.5569 49.9445 41.8885 49.9445H16.1107C13.4422 49.9445 11.2773 47.7797 11.2773 45.1112V12.889C11.2773 10.2205 13.4422 8.05566 16.1107 8.05566ZM41.8885 11.2779H16.1107C15.2218 11.2779 14.4996 12.0001 14.4996 12.889V45.1112C14.4996 46.0001 15.2218 46.7223 16.1107 46.7223H41.8885C42.7773 46.7223 43.4996 46.0001 43.4996 45.1112V12.889C43.4996 12.0001 42.7773 11.2779 41.8885 11.2779ZM38.6654 29.7222V32.9444H19.332V29.7222H38.6654ZM38.6654 41.0001V37.7778H19.332V41.0001H38.6654Z"
+                                  fill="url(#paint0_linear_9048_90146)"/>
+                            <mask id="mask0_9048_90146" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="19" y="8"
+                                  width="11" height="14">
+                                <path d="M27 8H22C20.3431 8 19 9.34315 19 11V19C19 20.6569 20.3431 22 22 22H27C28.6569 22 30 20.6569 30 19V11C30 9.34315 28.6569 8 27 8Z"
+                                      fill="white"/>
+                            </mask>
+                            <g mask="url(#mask0_9048_90146)">
+                                <path d="M27 8H22C20.3431 8 19 9.34315 19 11V19C19 20.6569 20.3431 22 22 22H27C28.6569 22 30 20.6569 30 19V11C30 9.34315 28.6569 8 27 8Z"
+                                      stroke="url(#paint1_linear_9048_90146)" stroke-width="6.4"/>
+                            </g>
+                            <defs>
+                                <linearGradient id="paint0_linear_9048_90146" x1="48.3981" y1="62.056" x2="32.6142"
+                                                y2="31.0826"
+                                                gradientUnits="userSpaceOnUse">
+                                    <stop offset="0.075419" stop-color="#FBB033"/>
+                                    <stop offset="0.6141" stop-color="#FDC73D"/>
+                                    <stop offset="0.959" stop-color="#FFE248"/>
+                                </linearGradient>
+                                <linearGradient id="paint1_linear_9048_90146" x1="30.5202" y1="26.0479" x2="25.0203"
+                                                y2="16.0261" gradientUnits="userSpaceOnUse">
+                                    <stop offset="0.075419" stop-color="#FBB033"/>
+                                    <stop offset="0.6141" stop-color="#FDC73D"/>
+                                    <stop offset="0.959" stop-color="#FFE248"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <span class="sound-type-text">Аудионкниги</span>
+                    </div>
+
+                    <div class="sound-type-item">
+                        <svg width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M34.3226 8.70273L33.9026 10.2466L34.3226 8.70273ZM33.8063 9.5031L32.5014 10.429L33.8063 9.5031ZM9.30368 33.5132L10.2558 32.2273L9.30368 33.5132ZM28.8125 48.2591C19.7559 48.2591 12.1484 42.0326 10.0452 33.625L6.94085 34.4015C9.39181 44.1995 18.2529 51.4591 28.8125 51.4591V48.2591ZM48.1569 28.9147C48.1569 39.5977 39.4954 48.2591 28.8125 48.2591V51.4591C41.2628 51.4591 51.3569 41.365 51.3569 28.9147H48.1569ZM33.9026 10.2466C42.1177 12.4812 48.1569 19.9953 48.1569 28.9147H51.3569C51.3569 18.5147 44.315 9.76261 34.7425 7.15882L33.9026 10.2466ZM32.5014 10.429C34.3274 13.0024 35.4005 16.1454 35.4005 19.5435H38.6005C38.6005 15.4603 37.3085 11.674 35.1112 8.57722L32.5014 10.429ZM35.4005 19.5435C35.4005 28.253 28.3391 35.3144 19.6296 35.3144V38.5144C30.1064 38.5144 38.6005 30.0203 38.6005 19.5435H35.4005ZM19.6296 35.3144C16.1168 35.3144 12.8763 34.1676 10.2558 32.2273L8.35159 34.7991C11.5043 37.1334 15.4081 38.5144 19.6296 38.5144V35.3144ZM34.7425 7.15882C33.749 6.88857 32.8705 7.37607 32.44 8.0545C32.0211 8.71444 31.9516 9.65417 32.5014 10.429L35.1112 8.57722C35.3874 8.96661 35.3481 9.44413 35.1418 9.76923C34.9237 10.1128 34.4401 10.3928 33.9026 10.2466L34.7425 7.15882ZM10.0452 33.625C10.1804 34.1652 9.89066 34.6428 9.54282 34.8538C9.21364 35.0535 8.73538 35.0833 8.35159 34.7991L10.2558 32.2273C9.49221 31.662 8.55129 31.7126 7.88306 32.1179C7.19617 32.5346 6.69104 33.4028 6.94085 34.4015L10.0452 33.625Z"
+                                  fill="url(#paint0_linear_9048_90155)"/>
+                            <defs>
+                                <linearGradient id="paint0_linear_9048_90155" x1="53.4604" y1="64.2898" x2="38.4561"
+                                                y2="29.4108" gradientUnits="userSpaceOnUse">
+                                    <stop offset="0.075419" stop-color="#FBB033"/>
+                                    <stop offset="0.6141" stop-color="#FDC73D"/>
+                                    <stop offset="0.959" stop-color="#FFE248"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <span class="sound-type-text">Аудиосказки</span>
+                    </div>
+
+                    <div class="sound-type-item">
+                        <svg width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M29.0001 8.05566C40.5667 8.05566 49.9445 17.4335 49.9445 29.0001C49.9445 40.5667 40.5667 49.9445 29.0001 49.9445C17.4335 49.9445 8.05566 40.5667 8.05566 29.0001C8.05566 17.4335 17.4335 8.05566 29.0001 8.05566ZM29.0001 11.2779C19.2131 11.2779 11.2779 19.2131 11.2779 29.0001C11.2779 38.7871 19.2131 46.7223 29.0001 46.7223C38.7871 46.7223 46.7223 38.7871 46.7223 29.0001C46.7223 19.2131 38.7871 11.2779 29.0001 11.2779ZM22.5557 20.9446C22.5557 19.6791 23.9476 18.9077 25.0207 19.5783L37.9096 27.6339C38.9192 28.2649 38.9192 29.7353 37.9096 30.3663L25.0207 38.4219C23.9476 39.0926 22.5557 38.3211 22.5557 37.0557V20.9446ZM25.7779 34.1488L34.0158 29.0001L25.7779 23.8514V34.1488Z"
+                                  fill="url(#paint0_linear_9048_90164)"/>
+                            <defs>
+                                <linearGradient id="paint0_linear_9048_90164" x1="51.9255" y1="62.056" x2="37.7392"
+                                                y2="29.1563"
+                                                gradientUnits="userSpaceOnUse">
+                                    <stop offset="0.075419" stop-color="#FBB033"/>
+                                    <stop offset="0.6141" stop-color="#FDC73D"/>
+                                    <stop offset="0.959" stop-color="#FFE248"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <span class="sound-type-text">Лайвы</span>
+                    </div>
+
+                    <div class="sound-type-item">
+                        <svg width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M28.9991 8.05566C40.5658 8.05566 49.9436 17.4335 49.9436 29.0001C49.9436 40.5667 40.5658 49.9445 28.9991 49.9445C17.4325 49.9445 8.05469 40.5667 8.05469 29.0001C8.05469 17.4335 17.4325 8.05566 28.9991 8.05566ZM28.9991 11.2779C19.2121 11.2779 11.2769 19.2131 11.2769 29.0001C11.2769 38.7871 19.2121 46.7223 28.9991 46.7223C38.7862 46.7223 46.7214 38.7871 46.7214 29.0001C46.7214 19.2131 38.7862 11.2779 28.9991 11.2779Z"
+                                  fill="url(#paint0_linear_9048_90167)"/>
+                            <path d="M15.2803 14.0195L13.0176 16.2822L41.7396 45.0043L44.0024 42.7415L15.2803 14.0195Z"
+                                  fill="url(#paint1_linear_9048_90167)"/>
+                            <path d="M13.6875 43.0493L15.9502 45.312L44.9804 16.2818L42.7176 14.0191L13.6875 43.0493Z"
+                                  fill="url(#paint2_linear_9048_90167)"/>
+                            <mask id="mask0_9048_90167" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="11" y="11"
+                                  width="36" height="36">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M28.9996 11.2778C19.2125 11.2778 11.2773 19.213 11.2773 29.0001C11.2773 38.7871 19.2125 46.7223 28.9996 46.7223C38.7866 46.7223 46.7218 38.7871 46.7218 29.0001C46.7218 19.213 38.7866 11.2778 28.9996 11.2778Z"
+                                      fill="black"/>
+                            </mask>
+                            <g mask="url(#mask0_9048_90167)">
+                                <path d="M15.0001 25.4C20.7439 25.4 25.4001 20.7437 25.4001 15C25.4001 9.25621 20.7439 4.59998 15.0001 4.59998C9.25634 4.59998 4.6001 9.25621 4.6001 15C4.6001 20.7437 9.25634 25.4 15.0001 25.4Z"
+                                      stroke="url(#paint3_linear_9048_90167)" stroke-width="3.2"/>
+                                <path d="M42.0001 52.4C47.7439 52.4 52.4001 47.7437 52.4001 42C52.4001 36.2562 47.7439 31.6 42.0001 31.6C36.2563 31.6 31.6001 36.2562 31.6001 42C31.6001 47.7437 36.2563 52.4 42.0001 52.4Z"
+                                      stroke="url(#paint4_linear_9048_90167)" stroke-width="3.2"/>
+                            </g>
+                            <defs>
+                                <linearGradient id="paint0_linear_9048_90167" x1="51.9246" y1="62.056" x2="37.7383"
+                                                y2="29.1563"
+                                                gradientUnits="userSpaceOnUse">
+                                    <stop offset="0.075419" stop-color="#FBB033"/>
+                                    <stop offset="0.6141" stop-color="#FDC73D"/>
+                                    <stop offset="0.959" stop-color="#FFE248"/>
+                                </linearGradient>
+                                <linearGradient id="paint1_linear_9048_90167" x1="52.4139" y1="50.9391" x2="46.8198"
+                                                y2="54.8048" gradientUnits="userSpaceOnUse">
+                                    <stop offset="0.075419" stop-color="#FBB033"/>
+                                    <stop offset="0.6141" stop-color="#FDC73D"/>
+                                    <stop offset="0.959" stop-color="#FFE248"/>
+                                </linearGradient>
+                                <linearGradient id="paint2_linear_9048_90167" x1="51.0043" y1="5.51843" x2="54.8818"
+                                                y2="11.1071" gradientUnits="userSpaceOnUse">
+                                    <stop offset="0.075419" stop-color="#FBB033"/>
+                                    <stop offset="0.6141" stop-color="#FDC73D"/>
+                                    <stop offset="0.959" stop-color="#FFE248"/>
+                                </linearGradient>
+                                <linearGradient id="paint3_linear_9048_90167" x1="26.3838" y1="31.414" x2="19.3395"
+                                                y2="15.0776"
+                                                gradientUnits="userSpaceOnUse">
+                                    <stop offset="0.075419" stop-color="#FBB033"/>
+                                    <stop offset="0.6141" stop-color="#FDC73D"/>
+                                    <stop offset="0.959" stop-color="#FFE248"/>
+                                </linearGradient>
+                                <linearGradient id="paint4_linear_9048_90167" x1="53.3838" y1="58.414" x2="46.3395"
+                                                y2="42.0776"
+                                                gradientUnits="userSpaceOnUse">
+                                    <stop offset="0.075419" stop-color="#FBB033"/>
+                                    <stop offset="0.6141" stop-color="#FDC73D"/>
+                                    <stop offset="0.959" stop-color="#FFE248"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <span class="sound-type-text">Спортивные трансляции</span>
+                    </div>
+
+                    <div class="sound-type-item">
+                        <svg width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M46.7136 12.6051C46.5665 10.0687 44.4616 8.05566 41.8885 8.05566H22.5551L22.2712 8.06387C19.7348 8.21094 17.7218 10.3158 17.7218 12.889V14.5001H16.1107C13.4422 14.5001 11.2773 16.665 11.2773 19.3334V45.1112C11.2773 47.7797 13.4422 49.9445 16.1107 49.9445H35.444C38.1125 49.9445 40.2773 47.7797 40.2773 45.1112V43.5006L42.1591 43.5012L42.6217 43.5038C43.7682 43.5054 44.2552 43.455 44.8958 43.2005C46.0829 42.7289 46.7218 41.68 46.7218 40.2779V12.889L46.7136 12.6051ZM40.2773 40.278L42.9881 40.2781C43.1078 40.2759 43.2093 40.2723 43.2956 40.2675L43.4996 40.2505V12.889C43.4996 12.0636 42.8768 11.3819 42.0762 11.2887L41.8885 11.2779H22.5551C21.7297 11.2779 21.048 11.9006 20.9549 12.7013L20.944 12.889V14.5001H35.444C38.1125 14.5001 40.2773 16.665 40.2773 19.3334V40.278ZM16.1107 17.7223H35.444C36.3329 17.7223 37.0551 18.4446 37.0551 19.3334V45.1112C37.0551 46.0001 36.3329 46.7223 35.444 46.7223H16.1107C15.2218 46.7223 14.4996 46.0001 14.4996 45.1112V19.3334C14.4996 18.4446 15.2218 17.7223 16.1107 17.7223ZM33.8329 25.7779V22.5557H17.7218V25.7779H33.8329ZM33.8329 38.6668V41.889H17.7218V38.6668H33.8329ZM33.8329 33.8334V30.6112H17.7218V33.8334H33.8329Z"
+                                  fill="url(#paint0_linear_9048_90170)"/>
+                            <defs>
+                                <linearGradient id="paint0_linear_9048_90170" x1="48.3981" y1="62.056" x2="32.6142"
+                                                y2="31.0826"
+                                                gradientUnits="userSpaceOnUse">
+                                    <stop offset="0.075419" stop-color="#FBB033"/>
+                                    <stop offset="0.6141" stop-color="#FDC73D"/>
+                                    <stop offset="0.959" stop-color="#FFE248"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <span class="sound-type-text">Лекции</span>
+                    </div>
+
+                    <div class="sound-type-item">
+                        <svg width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M41.8885 8.05566H16.1107C13.4422 8.05566 11.2773 10.2205 11.2773 12.889V45.1112C11.2773 47.7797 13.4422 49.9445 16.1107 49.9445H41.8885C44.5569 49.9445 46.7218 47.7797 46.7218 45.1112V12.889C46.7218 10.2205 44.5569 8.05566 41.8885 8.05566ZM16.1107 11.2779H41.8885C42.7773 11.2779 43.4996 12.0001 43.4996 12.889V45.1112C43.4996 46.0001 42.7773 46.7223 41.8885 46.7223H16.1107C15.2218 46.7223 14.4996 46.0001 14.4996 45.1112V12.889C14.4996 12.0001 15.2218 11.2779 16.1107 11.2779ZM30.6107 37.0557V33.8334H19.3329V37.0557H30.6107ZM38.6662 17.7223V20.9446H19.3329V17.7223H38.6662ZM38.6662 29.0001V25.7779H19.3329V29.0001H38.6662Z"
+                                  fill="url(#paint0_linear_9048_90197)"/>
+                            <defs>
+                                <linearGradient id="paint0_linear_9048_90197" x1="48.3981" y1="62.056" x2="32.6142"
+                                                y2="31.0826"
+                                                gradientUnits="userSpaceOnUse">
+                                    <stop offset="0.075419" stop-color="#FBB033"/>
+                                    <stop offset="0.6141" stop-color="#FDC73D"/>
+                                    <stop offset="0.959" stop-color="#FFE248"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <span class="sound-type-text">Новости</span>
+                    </div>
+
+                    <div class="sound-type-item">
+                        <svg width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M27.6337 17.5274C27.4403 17.5854 27.1875 17.9244 27.1875 18.1225V23.4801L41.6875 19.0552V13.2862L27.6337 17.5274ZM41.6875 22.8453L27.7166 27.1087L27.1875 27.2701V41.6876C27.1875 41.6876 27.1875 41.6876 27.1875 41.6877C27.1875 45.6917 23.9415 48.9376 19.9375 48.9376C15.9334 48.9376 12.6875 45.6917 12.6875 41.6876C12.6875 37.6835 15.9334 34.4376 19.9375 34.4376C21.258 34.4376 22.4961 34.7907 23.5625 35.4075V18.1225C23.5625 16.322 24.8668 14.5728 26.5921 14.0552L41.2413 9.66047C43.3676 9.02259 45.3125 10.4803 45.3125 12.7001V38.0626C45.3125 38.0626 45.3125 38.0626 45.3125 38.0627C45.3125 42.0667 42.0665 45.3126 38.0625 45.3126C34.0584 45.3126 30.8125 42.0667 30.8125 38.0626C30.8125 34.0585 34.0584 30.8126 38.0625 30.8126C39.383 30.8126 40.6211 31.1657 41.6875 31.7825V22.8453ZM41.6875 38.0626C41.6875 36.0606 40.0645 34.4376 38.0625 34.4376C36.0605 34.4376 34.4375 36.0606 34.4375 38.0626C34.4375 40.0646 36.0605 41.6876 38.0625 41.6876C40.0645 41.6876 41.6875 40.0647 41.6875 38.0627C41.6875 38.0626 41.6875 38.0626 41.6875 38.0626ZM23.5625 41.6876C23.5625 39.6856 21.9395 38.0626 19.9375 38.0626C17.9355 38.0626 16.3125 39.6856 16.3125 41.6876C16.3125 43.6896 17.9355 45.3126 19.9375 45.3126C21.9395 45.3126 23.5625 43.6897 23.5625 41.6877C23.5625 41.6876 23.5625 41.6876 23.5625 41.6876Z"
+                                  fill="url(#paint0_linear_9048_90200)"/>
+                            <defs>
+                                <linearGradient id="paint0_linear_9048_90200" x1="46.8554" y1="60.3376" x2="31.8049"
+                                                y2="31.456"
+                                                gradientUnits="userSpaceOnUse">
+                                    <stop offset="0.075419" stop-color="#FBB033"/>
+                                    <stop offset="0.6141" stop-color="#FDC73D"/>
+                                    <stop offset="0.959" stop-color="#FFE248"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <span class="sound-type-text">Волны</span>
+                    </div>
+
+                    <div class="sound-type-item">
+                        <svg width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M35.4882 18.4108C35.5165 18.4804 35.5822 18.5281 35.6603 18.5337L44.5732 19.1877C47.6357 19.4098 48.8788 23.236 46.5354 25.2204L39.7055 30.9884C39.6471 31.0378 39.6213 31.1171 39.6396 31.1915L41.7743 39.8721C42.5074 42.853 39.2521 45.2192 36.6426 43.6012L29.044 38.8873C28.9802 38.8475 28.8986 38.8475 28.8324 38.8886L21.2364 43.6009C18.6285 45.2198 15.3712 42.853 16.1043 39.8721L18.2389 31.1917C18.2573 31.1171 18.2315 31.0378 18.1727 30.9881L11.3416 25.219C8.99976 23.236 10.2429 19.4098 13.304 19.1878L22.2195 18.5336C22.2964 18.5281 22.3621 18.4804 22.3911 18.409L25.7679 10.1312C26.9271 7.2896 30.9515 7.2896 32.1106 10.1312L35.4882 18.4108ZM29.1272 11.3482L29.0803 11.2782C28.9838 11.1849 28.8087 11.2082 28.7515 11.3482L25.3754 19.6244C24.8849 20.8307 23.7521 21.6531 22.4541 21.7473L13.5384 22.4015C13.3573 22.4147 13.2837 22.6412 13.4223 22.7586L20.2514 28.5261C21.2461 29.3656 21.6786 30.6973 21.3681 31.9609L19.2333 40.6416C19.1899 40.8182 19.3833 40.9587 19.5375 40.863L27.1333 36.1508C28.2405 35.4634 29.6412 35.4634 30.7449 36.1505L38.3409 40.8628C38.4961 40.959 38.689 40.8188 38.6454 40.6416L36.5106 31.9607C36.2001 30.6973 36.6327 29.3656 37.6269 28.5264L44.4548 22.7599C44.595 22.6412 44.5214 22.4147 44.3389 22.4014L35.4258 21.7474C34.1266 21.6531 32.9938 20.8307 32.5041 19.6261L29.1272 11.3482ZM45.0189 11.8483L44.3229 12.6731C43.7491 13.3532 42.7326 13.4393 42.0526 12.8655C41.3725 12.2917 41.2864 11.2753 41.8602 10.5952L42.5562 9.77033C43.13 9.09027 44.1464 9.00413 44.8265 9.57793C45.5066 10.1517 45.5927 11.1682 45.0189 11.8483ZM49.8926 33.4618L48.8985 33.0429C48.0786 32.6974 47.1338 33.082 46.7882 33.902C46.4427 34.7219 46.8273 35.6667 47.6473 36.0123L48.6413 36.4312C49.4613 36.7767 50.4061 36.3921 50.7516 35.5721C51.0972 34.7521 50.7126 33.8073 49.8926 33.4618ZM15.3222 9.77033L16.0182 10.5952C16.592 11.2753 16.5059 12.2917 15.8258 12.8655C15.1457 13.4393 14.1293 13.3532 13.5555 12.6731L12.8595 11.8483C12.2857 11.1682 12.3718 10.1517 13.0519 9.57793C13.7319 9.00413 14.7484 9.09027 15.3222 9.77033ZM30.5503 49.3559V48.2781C30.5503 47.3883 29.829 46.667 28.9392 46.667C28.0494 46.667 27.3281 47.3883 27.3281 48.2781V49.3559C27.3281 50.2457 28.0494 50.967 28.9392 50.967C29.829 50.967 30.5503 50.2457 30.5503 49.3559ZM10.2312 36.0123L9.23716 36.4312C8.4172 36.7767 7.47238 36.3921 7.12685 35.5721C6.78133 34.7521 7.16593 33.8073 7.9859 33.4618L8.97995 33.0429C9.79991 32.6974 10.7447 33.082 11.0903 33.902C11.4358 34.7219 11.0512 35.6667 10.2312 36.0123Z"
+                                  fill="url(#paint0_linear_9048_90203)"/>
+                            <defs>
+                                <linearGradient id="paint0_linear_9048_90203" x1="52.9536" y1="63.3902" x2="38.612"
+                                                y2="29.4248"
+                                                gradientUnits="userSpaceOnUse">
+                                    <stop offset="0.075419" stop-color="#FBB033"/>
+                                    <stop offset="0.6141" stop-color="#FDC73D"/>
+                                    <stop offset="0.959" stop-color="#FFE248"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <span class="sound-type-text">Медитации</span>
+                    </div>
+
+                    <div class="sound-type-item">
+                        <svg width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M29.0001 8.05566C40.5667 8.05566 49.9445 17.4335 49.9445 29.0001C49.9445 40.5667 40.5667 49.9445 29.0001 49.9445C17.4335 49.9445 8.05566 40.5667 8.05566 29.0001C8.05566 17.4335 17.4335 8.05566 29.0001 8.05566ZM29.0001 11.2779C19.2131 11.2779 11.2779 19.2131 11.2779 29.0001C11.2779 38.7871 19.2131 46.7223 29.0001 46.7223C38.7871 46.7223 46.7223 38.7871 46.7223 29.0001C46.7223 19.2131 38.7871 11.2779 29.0001 11.2779Z"
+                                  fill="url(#paint0_linear_9048_90213)"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M23.7587 28.8802C23.7587 29.9193 22.9193 30.7603 21.8802 30.7603C20.841 30.7603 20 29.9193 20 28.8802C20 27.841 20.841 27 21.8802 27C22.9193 27 23.7587 27.841 23.7587 28.8802Z"
+                                  fill="url(#paint1_linear_9048_90213)"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M30.9986 28.8802C30.9986 29.9193 30.1576 30.7603 29.1184 30.7603C28.0793 30.7603 27.2383 29.9193 27.2383 28.8802C27.2383 27.841 28.0793 27 29.1184 27C30.1576 27 30.9986 27.841 30.9986 28.8802Z"
+                                  fill="url(#paint2_linear_9048_90213)"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M38.2353 28.8802C38.2353 29.9193 37.3943 30.7603 36.3551 30.7603C35.316 30.7603 34.4766 29.9193 34.4766 28.8802C34.4766 27.841 35.316 27 36.3551 27C37.3943 27 38.2353 27.841 38.2353 28.8802Z"
+                                  fill="url(#paint3_linear_9048_90213)"/>
+                            <defs>
+                                <linearGradient id="paint0_linear_9048_90213" x1="51.9255" y1="62.056" x2="37.7392"
+                                                y2="29.1563"
+                                                gradientUnits="userSpaceOnUse">
+                                    <stop offset="0.075419" stop-color="#FBB033"/>
+                                    <stop offset="0.6141" stop-color="#FDC73D"/>
+                                    <stop offset="0.959" stop-color="#FFE248"/>
+                                </linearGradient>
+                                <linearGradient id="paint1_linear_9048_90213" x1="23.9365" y1="31.8475" x2="22.6626"
+                                                y2="28.8946" gradientUnits="userSpaceOnUse">
+                                    <stop offset="0.075419" stop-color="#FBB033"/>
+                                    <stop offset="0.6141" stop-color="#FDC73D"/>
+                                    <stop offset="0.959" stop-color="#FFE248"/>
+                                </linearGradient>
+                                <linearGradient id="paint2_linear_9048_90213" x1="31.1764" y1="31.8475" x2="29.9029"
+                                                y2="28.8942" gradientUnits="userSpaceOnUse">
+                                    <stop offset="0.075419" stop-color="#FBB033"/>
+                                    <stop offset="0.6141" stop-color="#FDC73D"/>
+                                    <stop offset="0.959" stop-color="#FFE248"/>
+                                </linearGradient>
+                                <linearGradient id="paint3_linear_9048_90213" x1="38.413" y1="31.8475" x2="37.1392"
+                                                y2="28.8946"
+                                                gradientUnits="userSpaceOnUse">
+                                    <stop offset="0.075419" stop-color="#FBB033"/>
+                                    <stop offset="0.6141" stop-color="#FDC73D"/>
+                                    <stop offset="0.959" stop-color="#FFE248"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <span class="sound-type-text">И многое другое</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="app">
+            <div class="container">
+                <div class="app-wrapper">
+                    <div class="app-about">
+                        <div class="app-title-wrapper">Установи
+                            <svg width="79" height="79" viewBox="0 0 79 79" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <g filter="url(#filter0_f_9013_90058)">
+                                    <rect x="16" y="16" width="46" height="46" rx="16" fill="#909090"/>
+                                </g>
+                                <rect x="11" y="7" width="56" height="56" rx="16" fill="white"/>
+                                <g filter="url(#filter1_f_9013_90058)">
+                                    <circle cx="41" cy="40.9999" r="18" fill="#C4C4C4"/>
+                                </g>
+                                <g clip-path="url(#clip0_9013_90058)">
+                                    <path d="M39 55.5C27.662 55.5 18.5 46.3635 18.5 35.0571C18.5 29.5752 20.676 24.436 24.4553 20.553C28.3492 16.6699 33.5028 14.5 39 14.5C50.3381 14.5 59.5001 23.6365 59.5001 34.9429C59.5001 46.2493 50.3381 55.3858 39 55.5Z"
+                                          fill="url(#paint0_linear_9013_90058)"/>
+                                    <mask id="mask0_9013_90058" style="mask-type:alpha" maskUnits="userSpaceOnUse"
+                                          x="18"
+                                          y="14"
+                                          width="42" height="42">
+                                        <path d="M39 55.5C27.662 55.5 18.5 46.3635 18.5 35.0571C18.5 29.5752 20.676 24.436 24.4553 20.553C28.3492 16.6699 33.5028 14.5 39 14.5C50.3381 14.5 59.5001 23.6365 59.5001 34.9429C59.5001 46.2493 50.3381 55.3858 39 55.5Z"
+                                              fill="url(#paint1_linear_9013_90058)"/>
+                                    </mask>
+                                    <g mask="url(#mask0_9013_90058)">
+                                        <path d="M62.1757 30.8979L16.1562 30.9632L16.1677 39.1032L62.1871 39.038L62.1757 30.8979Z"
+                                              fill="#121212"/>
+                                        <path d="M62.1757 47.296L16.1562 47.3613L16.1679 55.7001L62.1874 55.6349L62.1757 47.296Z"
+                                              fill="#121212"/>
+                                        <path d="M62.1747 13.7616L16.1553 13.8276L16.1676 22.7037L62.187 22.6377L62.1747 13.7616Z"
+                                              fill="#121212"/>
+                                    </g>
+                                </g>
+                                <defs>
+                                    <filter id="filter0_f_9013_90058" x="0" y="0" width="78" height="78"
+                                            filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix"
+                                                 result="shape"/>
+                                        <feGaussianBlur stdDeviation="8" result="effect1_foregroundBlur_9013_90058"/>
+                                    </filter>
+                                    <filter id="filter1_f_9013_90058" x="3" y="2.99988" width="76" height="76"
+                                            filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix"
+                                                 result="shape"/>
+                                        <feGaussianBlur stdDeviation="10" result="effect1_foregroundBlur_9013_90058"/>
+                                    </filter>
+                                    <linearGradient id="paint0_linear_9013_90058" x1="18.5" y1="35.0044" x2="59.5089"
+                                                    y2="35.0044"
+                                                    gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#FF9900"/>
+                                        <stop offset="0.765625" stop-color="#FFCD00"/>
+                                    </linearGradient>
+                                    <linearGradient id="paint1_linear_9013_90058" x1="18.5" y1="35.0044" x2="59.5089"
+                                                    y2="35.0044"
+                                                    gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#FF9900"/>
+                                        <stop offset="0.765625" stop-color="#FFCD00"/>
+                                    </linearGradient>
+                                    <clipPath id="clip0_9013_90058">
+                                        <rect width="44" height="44" fill="white" transform="translate(17 13)"/>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            Мой Beeline
+                        </div>
+
+                        <p class="app-text">
+                            Чтобы воспользоваться подпиской СберЗвук, Вам <br> необходимо скачать приложение Мой
+                            Beeline,
+                            подключить <br>
+                            один из тарифов новой линейки и активировать <br>
+                            подписку в тарифе
+                        </p>
+
+                        <button class="intro_btn"><span class="intro_btn_title">Как подключить СберЗвук?</span>
+                            <svg width="37" height="36" viewBox="0 0 37 36" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M36.5 18.0087C36.5 27.9247 28.4208 36 18.5 36C8.57915 36 0.5 27.9247 0.5 18.0087C0.5 8.07525 8.57915 0 18.5 0C28.4208 0 36.5 8.07525 36.5 18.0087Z"
+                                      fill="#FFCD00"/>
+                                <path d="M25.7001 18.0088C25.7001 18.4637 25.5569 18.9204 25.2706 19.2861C25.2169 19.3578 24.9663 19.6535 24.7694 19.846L24.662 19.951C23.1586 21.5449 19.418 23.942 17.5208 24.7101C17.5208 24.7276 16.3933 25.1843 15.8563 25.2001H15.7848C14.9615 25.2001 14.1919 24.7469 13.7981 24.012C13.5833 23.6078 13.3865 22.4355 13.3686 22.4198C13.2075 21.3682 13.1001 19.7585 13.1001 17.9913C13.1001 16.1384 13.2075 14.4569 13.4044 13.4246C13.4044 13.4071 13.6012 12.4623 13.7265 12.1473C13.9234 11.6941 14.2813 11.3075 14.7288 11.0625C15.0867 10.8893 15.4626 10.8 15.8563 10.8C16.268 10.8193 17.0376 11.08 17.3419 11.2025C19.3464 11.9723 23.1765 14.4919 24.6441 16.0316C24.8947 16.2766 25.1632 16.5758 25.2348 16.644C25.539 17.029 25.7001 17.5014 25.7001 18.0088Z"
+                                      fill="#121212"/>
+                            </svg>
+                        </button>
+                        <div class="mobile-apps-wrapper">
+                            <div class="mobile-app">
+                                <svg width="20" height="25" viewBox="0 0 20 25" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16.745 13.1174C16.7721 11.2182 17.7581 9.46593 19.3564 8.47667C18.3535 7.00565 16.7241 6.10233 14.9621 6.04061C13.1131 5.84573 11.3182 7.16729 10.3757 7.16729C9.43316 7.16729 7.9744 6.06497 6.40757 6.09542C4.35173 6.16242 2.48108 7.31818 1.47898 9.1405C-0.652142 12.8799 0.938695 18.3793 2.97977 21.4C4.00031 22.886 5.19493 24.5364 6.75576 24.4451C8.31658 24.3537 8.85086 23.4585 10.6938 23.4585C12.5368 23.4585 13.0531 24.4451 14.6499 24.4085C16.2467 24.372 17.3213 22.9225 18.3058 21.4304C19.0261 20.3911 19.583 19.2447 19.9567 18.0321C18.0131 17.1936 16.7496 15.2601 16.745 13.1174Z"
+                                          fill="#FAFCFC"/>
+                                    <path d="M13.7369 4.07959C14.6215 2.9882 15.0522 1.59008 14.9375 0.181885C13.5753 0.315368 12.3137 0.968346 11.4077 2.00893C10.5126 3.04213 10.059 4.39393 10.147 5.76656C11.5352 5.79172 12.8581 5.17003 13.7369 4.07959Z"
+                                          fill="#FAFCFC"/>
+                                </svg>
+                                <div class="app-text-wrapper">
+                                    <div class="app-text-1">
+                                        Загрузите в
+                                    </div>
+                                    <div class="app-text-2">
+                                        App Store
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mobile-app">
+                                <svg width="25" height="24" viewBox="0 0 25 24" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_8905_91461)">
+                                        <path d="M21.8003 10.2279L17.7973 7.91603L12.313 12.0138L17.7972 16.1116L21.8139 13.7918C22.4401 13.4113 22.8139 12.7465 22.8139 12.0139C22.8139 11.2813 22.4401 10.6165 21.8003 10.2279Z"
+                                              fill="#FF9100"/>
+                                        <path d="M13.6994 12.0139C13.6934 12.0216 8.85036 18.2484 8.84643 18.2535L2.53753 23.222C2.14925 22.8337 1.91357 22.3069 1.91357 21.7245V2.26893C1.91357 1.68661 2.14925 1.15967 2.53753 0.771477L8.84643 5.77432C8.85036 5.77935 13.6934 12.0062 13.6994 12.0139Z"
+                                              fill="#25D9F8"/>
+                                        <path d="M13.6996 12.0139L12.313 13.8025V10.2252L13.6996 12.0139Z"
+                                              fill="#00C0F1"/>
+                                        <path d="M17.8038 7.9096L13.6995 12.0139L2.5376 0.771534C2.67621 0.646696 2.81491 0.549636 2.96743 0.452576C3.63294 0.0782483 4.42333 0.0920678 5.07507 0.49422L12.3129 4.74826L17.8038 7.9096Z"
+                                              fill="#7FE881"/>
+                                        <path d="M17.8039 7.90959L13.6996 12.0139L12.313 10.6273V4.74826L17.8039 7.90959Z"
+                                              fill="#5BC980"/>
+                                        <path d="M17.8038 16.1181L12.3129 19.2795L5.0612 23.5132C4.72843 23.7073 4.36792 23.8182 3.9935 23.8182C3.64685 23.8182 3.30021 23.7211 2.96743 23.5409C2.81491 23.4438 2.67621 23.3468 2.5376 23.222L13.6995 12.0139L17.8038 16.1181Z"
+                                              fill="#FF637B"/>
+                                        <path d="M17.8039 16.1181L12.313 19.2795V13.4005L13.6996 12.0139L17.8039 16.1181Z"
+                                              fill="#E63950"/>
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_8905_91461">
+                                            <rect width="23.6364" height="23.6364" fill="white"
+                                                  transform="translate(0.54541 0.181816)"/>
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <div class="app-text-wrapper">
+                                    <div class="app-text-1">
+                                        Загрузите в
+                                    </div>
+                                    <div class="app-text-2">
+                                        Google Play
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <img class="app-image" src="./assets/images/Frame%205.jpg" alt="">
+                </div>
+            </div>
+        </div>
     </div>
-</div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__nav">
+                <div class="footer__col">
+                    <h3 class="footer__title">Частным лицам</h3>
+                    <ul class="footer__list">
+                        <li class="footer__item"><a>Тарифы</a></li>
+                        <li class="footer__item"><a>Пакеты</a></li>
+                        <li class="footer__item"><a>Интернет</a></li>
+                        <li class="footer__item"><a>Услуги</a></li>
+                        <li class="footer__item"><a>Акции и новости</a></li>
+                        <li class="footer__item"><a>Роуминг и звонки зарубеж</a></li>
+                        <li class="footer__item"><a>Пополнение</a></li>
+                        <li class="footer__item"><a>О компании</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__col">
+                    <h3 class="footer__title">Бизнесу</h3>
+                    <ul class="footer__list">
+                        <li class="footer__item"><a>Бизнес</a></li>
+                        <li class="footer__item"><a>Стать корп.клиентом</a></li>
+                        <li class="footer__item"><a>Тарифы</a></li>
+                        <li class="footer__item"><a>Услуги</a></li>
+                        <li class="footer__item"><a>Поддержка</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__col">
+                    <h3 class="footer__title">Компания</h3>
+                    <ul class="footer__list">
+                        <li class="footer__item"><a>О нас</a></li>
+                        <li class="footer__item"><a>Корпоративная ответственность</a></li>
+                        <li class="footer__item"><a>Карьера в Beeline</a></li>
+                        <li class="footer__item"><a>Стажировка в Beeline</a></li>
+                        <li class="footer__item"><a>Кодекс поведения БП</a></li>
+                        <li class="footer__item"><a>Новости компании</a></li>
+                        <li class="footer__item"><a>Закупки</a></li>
+                        <li class="footer__item"><a>Правовая информация</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__col">
+                    <h3 class="footer__title">Поддержка</h3>
+                    <ul class="footer__list">
+                        <li class="footer__item"><a>Популярные вопросы</a></li>
+                        <li class="footer__item"><a>Офисы</a></li>
+                        <li class="footer__item"><a>Видеоуроки Beeline</a></li>
+                        <li class="footer__item"><a>Оставить заявку</a></li>
+                        <li class="footer__item"><a>Полезные документы и файлы</a></li>
+                        <li class="footer__item"><a>Отправка SMS</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer__contacts">
+                <div class="footer__socials">
+                    <div class="footer__socials-item">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M16 0C7.16344 0 0 7.16344 0 16C0 24.8366 7.16344 32 16 32C24.8366 32 32 24.8366 32 16C32 7.16344 24.8366 0 16 0ZM17.6677 16.7028V25.4077H14.066V16.7031H12.2667V13.7034H14.066V11.9024C14.066 9.4552 15.0821 8 17.9688 8H20.372V11.0001H18.8698C17.7461 11.0001 17.6718 11.4193 17.6718 12.2017L17.6677 13.7031H20.3891L20.0706 16.7028H17.6677Z"
+                                  fill="#808285"/>
+                        </svg>
+                    </div>
+
+                    <div class="footer__socials-item">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M16 0C7.16344 0 0 7.16344 0 16C0 24.8366 7.16344 32 16 32C24.8366 32 32 24.8366 32 16C32 7.16344 24.8366 0 16 0ZM17.6677 16.7028V25.4077H14.066V16.7031H12.2667V13.7034H14.066V11.9024C14.066 9.4552 15.0821 8 17.9688 8H20.372V11.0001H18.8698C17.7461 11.0001 17.6718 11.4193 17.6718 12.2017L17.6677 13.7031H20.3891L20.0706 16.7028H17.6677Z"
+                                  fill="#808285"/>
+                        </svg>
+                    </div>
+
+                    <div class="footer__socials-item">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M16 0C7.16344 0 0 7.16344 0 16C0 24.8366 7.16344 32 16 32C24.8366 32 32 24.8366 32 16C32 7.16344 24.8366 0 16 0ZM17.6677 16.7028V25.4077H14.066V16.7031H12.2667V13.7034H14.066V11.9024C14.066 9.4552 15.0821 8 17.9688 8H20.372V11.0001H18.8698C17.7461 11.0001 17.6718 11.4193 17.6718 12.2017L17.6677 13.7031H20.3891L20.0706 16.7028H17.6677Z"
+                                  fill="#808285"/>
+                        </svg>
+                    </div>
+
+                    <div class="footer__socials-item">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M16 0C7.16344 0 0 7.16344 0 16C0 24.8366 7.16344 32 16 32C24.8366 32 32 24.8366 32 16C32 7.16344 24.8366 0 16 0ZM17.6677 16.7028V25.4077H14.066V16.7031H12.2667V13.7034H14.066V11.9024C14.066 9.4552 15.0821 8 17.9688 8H20.372V11.0001H18.8698C17.7461 11.0001 17.6718 11.4193 17.6718 12.2017L17.6677 13.7031H20.3891L20.0706 16.7028H17.6677Z"
+                                  fill="#808285"/>
+                        </svg>
+                    </div>
+
+                    <div class="footer__socials-item">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M16 0C7.16344 0 0 7.16344 0 16C0 24.8366 7.16344 32 16 32C24.8366 32 32 24.8366 32 16C32 7.16344 24.8366 0 16 0ZM17.6677 16.7028V25.4077H14.066V16.7031H12.2667V13.7034H14.066V11.9024C14.066 9.4552 15.0821 8 17.9688 8H20.372V11.0001H18.8698C17.7461 11.0001 17.6718 11.4193 17.6718 12.2017L17.6677 13.7031H20.3891L20.0706 16.7028H17.6677Z"
+                                  fill="#808285"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="footer__contacts-details">
+                    <a class="footer__link">
+                        <img class="footer__link-icon" src="./assets/images/email.png"/>
+
+                        <div class="footer__link-text">answer@beeline.kg</div>
+                    </a>
+
+                    <a class="footer__link">
+                        <img class="footer__link-icon" src="./assets/images/phone.png"/>
+
+                        <div class="footer__link-text">0611 справочная</div>
+                    </a>
+
+                    <div class="footer__phone">
+                        Для операторов других сетей <br>
+                        +996 (775) 58 0611
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__copyright">
+                <div class="footer__copyright-logo">
+                    <img src="./assets/images/footer-logo.png" alt="">
+                </div>
+
+                <div class="footer__copyright-year">© Beeline, 2019</div>
+
+                <div class="footer__copyright-icons">
+                    <a>
+                        <img src="./assets/images/app1.png" alt="">
+                    </a>
+                    <a>
+                        <img src="./assets/images/app2.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</main>
+
+<script src="./index.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.9.0/slick/slick.min.js"></script>
 
 </body>
 </html>
