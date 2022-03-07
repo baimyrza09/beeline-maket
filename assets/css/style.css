@@ -195,8 +195,9 @@ main {
 }
 
 .tariffs-card-wrapper {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 40px;
 }
 
 .tariffs-card {
@@ -204,6 +205,8 @@ main {
     border: solid #E5E5E5 1px;
     border-radius: 16px;
     background-color: #fff;
+    width: 376px;
+    overflow: hidden;
 }
 
 .tariffs-card-header {
@@ -367,14 +370,12 @@ main {
 }
 
 .sound-types-wrapper {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
 }
 
 .sound-type-item {
-    width: 300px;
     display: flex;
     align-items: center;
     margin-bottom: 32px;
@@ -399,11 +400,11 @@ main {
 }
 
 .app-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 50% 50%;
     border-radius: 16px;
     background-color: #fff;
+    overflow: hidden;
 }
 
 .app-about {
@@ -468,19 +469,17 @@ main {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     column-gap: 80px;
-    margin-bottom: 40px;
 }
 
 .footer__title {
     font-size: 18px;
     line-height: 12px;
     color: #FFFFFF;
-    margin-bottom: 35px;
 }
 
 .footer__list {
     list-style: none;
-    margin: 0;
+    margin: 24px 0 0;
     padding: 0;
 }
 
@@ -505,7 +504,6 @@ main {
     justify-content: space-between;
     align-items: center;
     padding: 20px 0;
-    border-top: 1px solid #424242;
     border-bottom: 1px solid #424242;
 }
 
@@ -530,6 +528,10 @@ main {
 .footer__contacts-details {
     display: flex;
     align-items: center;
+}
+
+.footer__socials {
+    margin-right: 10px;
 }
 
 .footer__link {
@@ -574,6 +576,10 @@ main {
     margin-right: 16px;
 }
 
+.footer__logos {
+    display: none;
+}
+
 .header__mobile {
     display: none;
 }
@@ -592,6 +598,58 @@ main {
 
 /* MEDIA
 ================================================*/
+@media (max-width: 1300px) {
+    .tariffs-card-wrapper {
+        grid-template-columns: 376px 376px;
+        row-gap: 30px;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 1200px) {
+    .sound-wrapper {
+        column-gap: 20px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .tariffs-title {
+        font-size: 32px;
+        line-height: 38px;
+    }
+
+    .sound-about-text {
+        font-size: 16px;
+        line-height: 144%;
+    }
+
+    .sound-stats-num {
+        font-weight: 300;
+        font-size: 64px;
+        line-height: 52px;
+    }
+
+    .sound-stats-plus {
+        font-weight: 300;
+        font-size: 64px;
+        line-height: 52px;
+        margin: 0 5px;
+    }
+
+    .sound-stats {
+        margin-top: 20px;
+    }
+
+    .app-wrapper {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .app-about {
+        padding-left: 0;
+    }
+}
+
 @media (max-width: 950px) {
     .header {
         display: none;
@@ -699,11 +757,73 @@ main {
         font-weight: 700;
         margin-right: 10px;
     }
+
+    .sound-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .sound-about {
+        text-align: center;
+    }
+
+    .sound-stats {
+        justify-content: center;
+    }
+
+    .sound-types-wrapper {
+        padding: 0 20px;
+    }
+
+    .footer {
+        padding: 30px 15px;
+    }
+
+    .footer__contacts {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        margin-top: 40px;
+    }
+
+    .footer__socials {
+        margin-right: 0;
+        margin-bottom: 25px;
+    }
+
+    .footer__contacts-details {
+        flex-direction: column;
+    }
+
+    .footer__link + .footer__link {
+        margin-top: 25px;
+        margin-left: 0;
+    }
+
+    .footer__phone {
+        margin-left: 0;
+        margin-top: 25px;
+    }
+}
+
+@media (max-width: 850px) {
+    .tariffs-card-wrapper {
+        grid-template-columns: 376px;
+        justify-items: center;
+    }
+
+    .footer__nav {
+        grid-template-columns: 50% 50%;
+        row-gap: 20px;
+    }
 }
 
 @media (max-width: 800px) {
     .intro {
         height: 356px;
+    }
+
+    .sound-types-wrapper {
+        grid-template-columns: 1fr 1fr;
     }
 }
 
@@ -711,11 +831,157 @@ main {
     .intro {
         background-position: top 0 right -130px;
     }
+
+    .sound-type-item svg {
+        width: 36px;
+        height: 36px;
+    }
+
+    .sound-type-text {
+        font-size: 16px;
+        line-height: 144%;
+        margin-left: 8px;
+    }
+
+    .sound-types-wrapper {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        column-gap: 16px;
+    }
+
+    .sound-type-item {
+        margin-bottom: 24px;
+    }
+
+    .app-title-wrapper {
+        font-size: 24px;
+        line-height: 132%;
+    }
+
+    .app-about {
+        padding: 36px 10px 10px;
+    }
+
+    .app-title-wrapper svg {
+        width: 36px;
+        height: 36px;
+    }
+
+    .app-text {
+        margin: 12px 0 0;
+        font-size: 14px;
+        line-height: 144%;
+    }
+
+    .intro_btn {
+        margin: 24px auto 0;
+        padding: 16px 20px;
+    }
+
+    .intro_btn_title {
+        font-size: 16px;
+        line-height: 130%;
+    }
+
+    .mobile-apps-wrapper {
+        margin-top: 24px;
+    }
+
+    .app-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .mobile-app {
+        padding: 12px 16px 9px;
+    }
+
+    .mobile-apps-wrapper {
+        justify-content: center;
+    }
+
+    .app-text-wrapper {
+        margin-left: 10px;
+    }
+
+    .app-text-1, .app-text-2 {
+        font-size: 15px;
+    }
 }
 
 @media (max-width: 550px) {
     .intro {
         background-position: top 0 right -200px;
+    }
+
+    .background-wrapper {
+        padding: 48px 0;
+    }
+
+    .intro_inner-mobile {
+        padding-bottom: 0;
+    }
+
+    .intro_subtitle-1-mobile, .intro-title-mobile {
+        font-size: 24px;
+        text-transform: uppercase;
+        font-weight: 900;
+    }
+
+    .intro_subtitle-2-mobile {
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    .intro_btn-mobile {
+        margin: 24px 0 0;
+        padding: 10px 36px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .intro_btn_title-mobile {
+        font-size: 14px;
+        line-height: 130%;
+    }
+
+    .tariffs-title-wrapper, .tariffs-title {
+        font-size: 24px;
+        line-height: 132%;
+        text-align: left;
+    }
+
+    .tariffs_title_text-1 {
+        text-decoration: none;
+    }
+
+    .sound-about {
+        text-align: left;
+    }
+
+    .sound-stats {
+        justify-content: left;
+    }
+
+    .sound-stats-left {
+        margin-right: 15px;
+    }
+
+    .sound-about-text {
+        margin: 5px 0;
+    }
+
+    .sound-stats-num {
+        font-size: 55px;
+    }
+
+    .footer__nav {
+        grid-template-columns: 1fr;
+    }
+
+    .footer__copyright-icons {
+        display: none;
     }
 }
 
@@ -731,10 +997,112 @@ main {
         background-size: cover;
         height: 356px;
     }
-}
 
-@media (max-width: 460px) {
-    .intro__mobile {
-        height: 300px;
+    .tariffs-card-header-img {
+        width: 52px;
+        height: 52px;
+    }
+
+    .tariffs-card-header-text {
+        margin-left: 17px;
+        font-size: 16px;
+        line-height: 144%;
+        margin-bottom: 0;
+    }
+
+    .tariffs-card-header {
+        padding-bottom: 20px;
+    }
+
+    .tariffs-card-body-title {
+        font-size: 16px;
+        line-height: 144%;
+    }
+
+    .tariffs-card {
+        width: 312px;
+        padding: 20px;
+    }
+
+    .tariffs-card-body-btn {
+        font-size: 16px;
+        line-height: 130%;
+        padding: 17px;
+        width: 100%;
+    }
+
+    .sound-types-wrapper {
+        column-gap: 10px;
+        justify-content: center;
+    }
+
+    /* the slides */
+    .slick-slide {
+        margin: 0 5px;
+    }
+
+    /* the parent */
+    .slick-list {
+        margin: 0 -27px;
+    }
+
+    .slick-track {
+        display: flex !important;
+    }
+
+    .slick-slide {
+        height: inherit !important;
+    }
+
+    .slick-dots li button:before {
+        color: #CACACA;
+    !important;
+    }
+
+    .slick-dots li.slick-active button:before {
+        color: #0094FF !important;
+    }
+
+    .footer__title {
+        padding-bottom: 20px;
+        border-bottom: 1px solid #424242;
+        position: relative;
+    }
+
+    .footer__list {
+        display: none;
+    }
+
+    .footer__list_active {
+        display: block;
+    }
+
+    .footer__title:after {
+        content: url("../images/down_arrow.png");
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        right: 0;
+    }
+
+    .app {
+        margin-top: 37px;
+    }
+
+    .footer__copyright {
+        padding-top: 50px;
+        justify-content: space-between;
+    }
+
+    .footer__logos {
+        display: grid;
+        grid-template-columns: 24px 24px;
+        justify-content: center;
+        column-gap: 48px;
+        margin-top: 56px;
+    }
+
+    .footer__copyright-year {
+        margin: 0;
     }
 }
